@@ -1,0 +1,3 @@
+packages:
+  - 'progressBar/client'
+  - 'progressBar/server'

@@ -1,10 +1,13 @@
 {
   "name": "sandbox",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Sandbox for experimental projects",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:progressBar": "concurrently \"pnpm --filter server dev\" \"pnpm --filter client dev\"",
+    "dev:progressBar:server": "pnpm --filter server dev",
+    "dev:progressBar:client": "pnpm --filter client dev",
+    "install:all": "pnpm install"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/amootda/sandbox/issues"
   },
-  "homepage": "https://github.com/amootda/sandbox#readme"
+  "homepage": "https://github.com/amootda/sandbox#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }

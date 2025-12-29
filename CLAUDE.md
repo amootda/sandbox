@@ -9,13 +9,16 @@
 
 ```
 sandbox/
-├── package.json          # 프로젝트 메타데이터
-├── README.md            # 프로젝트 설명
+├── package.json          # 루트 메타데이터 (워크스페이스 설정)
+├── pnpm-workspace.yaml   # pnpm 워크스페이스 설정
+├── README.md            # 프로젝트 목록 및 설명
 ├── CLAUDE.md            # 이 파일 (작업 참고용)
 ├── LICENSE              # 라이센스
-└── [프로젝트명]/        # 각 아이디어별 디렉토리
-    ├── ...
-    └── ...
+└── [프로젝트명]/        # 각 아이디어별 독립 디렉토리
+    ├── README.md        # 프로젝트 상세 설명
+    ├── client/          # 프론트엔드 (필요시)
+    ├── server/          # 백엔드 (필요시)
+    └── ...              # 기타 파일들
 ```
 
 ## 작업 방식
@@ -34,7 +37,13 @@ sandbox/
 
 ## 현재 프로젝트 목록
 
-(작업을 진행하면서 여기에 프로젝트들을 추가해나갈 예정)
+### 1. Progress Bar Testing Environment (`/progressBar`)
+- **설명**: 서버 응답 속도를 조절하면서 다양한 Progress bar 컴포넌트를 테스트하는 UI 환경
+- **기술**: React + Vite (client), Node.js + Express (server), Server-Sent Events (SSE)
+- **특징**: 5가지 Progress bar 스타일, 실시간 시간 계산, 속도 조절 슬라이더
+- **디렉토리**: `/progressBar/client`, `/progressBar/server`
+- **실행**: `pnpm dev:progressBar` (루트에서)
+- **상세**: [progressBar/README.md](progressBar/README.md)
 
 ---
 
